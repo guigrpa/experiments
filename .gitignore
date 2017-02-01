@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+node_modules
+.nyc_output
+.nyc_tmp
+*.sublime-project
+*.sublime-workspace
