@@ -1,0 +1,51 @@
+{
+  "name": "grunt-coffee-react",
+  "description": "Compile CJSX files to JavaScript.",
+  "version": "3.0.0",
+  "homepage": "https://github.com/jsdf/grunt-coffee-react",
+  "author": {
+    "name": "Grunt Team",
+    "url": "http://gruntjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsdf/grunt-coffee-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsdf/grunt-coffee-react/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jsdf/grunt-coffee-react/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "chalk": "~0.4.0",
+    "coffee-react": "^4.0.0",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-internal": "~0.4.6",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
+}
