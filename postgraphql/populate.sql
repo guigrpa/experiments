@@ -1,0 +1,12 @@
+INSERT INTO forum_example.person(id, first_name, last_name, about) VALUES ('923be73e-dc9c-11e6-ac9a-efaf3ed1a732', 'Guillermo', 'Grau', 'About me');
+INSERT INTO forum_example.person(id, first_name, last_name, about) VALUES ('923fdef2-dc9c-11e6-ac9b-1f77ab66b386', 'Violeta', 'Redgrave', NULL);
+INSERT INTO forum_example.person(id, first_name, last_name, about) VALUES ('9240542c-dc9c-11e6-ac9c-6b543cdc5941', 'Luisa', 'Miller', NULL);
+INSERT INTO forum_example.post(id, author_id, headline, body, topic) VALUES ('1c6a61a6-dc9d-11e6-ac9d-9337d0f377d6', '923be73e-dc9c-11e6-ac9a-efaf3ed1a732', 'My first post', 'Bla 1', 'discussion');
+INSERT INTO forum_example.post(id, author_id, headline, body, topic) VALUES ('1c6b9a30-dc9d-11e6-ac9e-cb9ad7cad6ae', '923be73e-dc9c-11e6-ac9a-efaf3ed1a732', 'My second post', 'Bla 2', 'inspiration');
+INSERT INTO forum_example.post(id, author_id, headline, body, topic) VALUES ('1c6c367a-dc9d-11e6-ac9f-fbde77d22a5f', '923be73e-dc9c-11e6-ac9a-efaf3ed1a732', 'My third post', 'Bla 3', 'discussion');
+INSERT INTO forum_example.post(id, author_id, headline, body, topic) VALUES ('1c6cd2ba-dc9d-11e6-aca0-63ebf2f7c7f1', '9240542c-dc9c-11e6-ac9c-6b543cdc5941', 'My name is Luisa', 'Bla Luisa', 'showcase');
+INSERT INTO forum_example.post(id, author_id, headline, body, topic, accepts_comments) VALUES ('03ff7c3a-e2cb-11e6-bb52-f715f92c5409', '9240542c-dc9c-11e6-ac9c-6b543cdc5941', 'Example closed post', 'This post is closed for comments', 'showcase', FALSE);
+INSERT INTO forum_example.comment(id, post_id, commenter_id, body) VALUES ('8ee69d4c-dc9f-11e6-aca1-d79095e0dc43', '1c6a61a6-dc9d-11e6-ac9d-9337d0f377d6', '923fdef2-dc9c-11e6-ac9b-1f77ab66b386', 'That is nonsense!');
+INSERT INTO forum_example.comment(id, post_id, commenter_id, body) VALUES ('8ee7d5cc-dc9f-11e6-aca2-277db4e6fc03', '1c6b9a30-dc9d-11e6-ac9e-cb9ad7cad6ae', '923fdef2-dc9c-11e6-ac9b-1f77ab66b386', 'Great!');
+INSERT INTO forum_example.comment(id, post_id, commenter_id, body) VALUES ('8ee823ec-dc9f-11e6-aca3-efdd809d5723', '1c6b9a30-dc9d-11e6-ac9e-cb9ad7cad6ae', '9240542c-dc9c-11e6-ac9c-6b543cdc5941', 'Gibberish!');
+INSERT INTO forum_example.comment(id, post_id, commenter_id, body) VALUES ('7d68f0d8-e249-11e6-ab96-43ea584c562f', '1c6cd2ba-dc9d-11e6-aca0-63ebf2f7c7f1', '9240542c-dc9c-11e6-ac9c-6b543cdc5941', 'My post is the best');
