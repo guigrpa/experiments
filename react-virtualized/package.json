@@ -1,0 +1,25 @@
+{
+  "name": "testVirtualized2",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.2.2"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "lodash": "^4.15.0",
+    "react": "^15.3.1",
+    "react-addons-shallow-compare": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-sortable-hoc": "0.0.7",
+    "react-virtualized": "^7.22.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js"
+  }
+}
