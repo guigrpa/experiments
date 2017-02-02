@@ -1,0 +1,24 @@
+{
+  "srcPaths": [
+    "src"
+  ],
+  "srcExtensions": [
+    ".js",
+    ".jsx",
+    ".coffee",
+    ".cjsx"
+  ],
+  "langs": [
+    "en",
+    "es"
+  ],
+  "msgFunctionNames": [
+    "_t"
+  ],
+  "msgRegexps": [],
+  "fMinify": false,
+  "fJsOutput": true,
+  "fJsonOutput": true,
+  "fReactIntlOutput": true,
+  "dbVersion": 2
+}

@@ -1,0 +1,22 @@
+{
+  "aGVsbG9fdGhlcmUncyBzb21ldGhpbmcgd3Jvbmc=": {
+    "id": "aGVsbG9fdGhlcmUncyBzb21ldGhpbmcgd3Jvbmc=",
+    "context": "hello",
+    "text": "there's something wrong",
+    "firstUsed": "2017-02-02T14:52:04.783Z",
+    "unusedSince": null,
+    "sources": [
+      "src/test.js"
+    ]
+  },
+  "aGVsbG9fdGhlcmU=": {
+    "id": "aGVsbG9fdGhlcmU=",
+    "context": "hello",
+    "text": "there",
+    "firstUsed": "2017-02-02T14:52:04.783Z",
+    "unusedSince": null,
+    "sources": [
+      "src/test.js"
+    ]
+  }
+}
