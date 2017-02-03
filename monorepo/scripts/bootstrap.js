@@ -63,13 +63,14 @@ const run = async () => {
   for (let i = 0; i < pkgNames.length; i++) {
     const pkgName = pkgNames[i];
     const { pkgPath, specs } = allPackages[pkgName];
-    mainStory.info(`${chalk.bold('PASS 2:')} installing internal deps for ${chalk.cyan.bold(pkgName)}...`);
+    mainStory.info(
+      `${chalk.bold('PASS 2:')} installing internal deps for ${chalk.cyan.bold(pkgName)}...`);
     for (let k = 0; k < pkgNames.length; k++) {
       const depName = pkgNames[k];
       if (depName === pkgName) continue;
       for (let m = 0; m < DEP_TYPES.length; m++) {
         const deps = specs[DEP_TYPES[m]];
-        if (deps == null) continue
+        if (deps == null) continue;
         if (deps[depName]) {
           await exec(`yarn link ${depName}`, { cwd: pkgPath });
           break;
