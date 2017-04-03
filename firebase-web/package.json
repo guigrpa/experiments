@@ -1,0 +1,15 @@
+{
+  "name": "test-firebase-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd lib/server && http-server",
+    "buildClient": "rm -rf ./lib && mkdir lib && cd lib && mkdir server && cd .. && cp -r ./src/client/public/ ./lib/server/public && webpack --config ./webpackConfig.js --color --progress --display-chunks"
+  },
+  "dependencies": {
+    "firebase": "^3.7.4",
+    "http-server": "^0.9.0",
+    "webpack": "^2.3.3"
+  }
+}
