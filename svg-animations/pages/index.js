@@ -14,15 +14,18 @@ class AnimatedPath extends React.Component {
             stroke: gray;
             stroke-width: 20;
             stroke-dasharray: 200;
-            stroke-dashoffset: 200;
+            stroke-dashoffset: 0;
             stroke-linecap: round;
-            animation: dash 2s linear forwards infinite;
+            transition: stroke-dashoffset 2s linear;
+            /* animation: dash 2s linear forwards infinite; */
           }
+          /*
           @keyframes dash {
             to {
               stroke-dashoffset: 0;
             }
           }
+          */
         `}</style>
       </div>
     );
