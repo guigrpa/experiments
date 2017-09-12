@@ -16,35 +16,37 @@ const run = () => {
   tic('total');
 
   // No listener
+  delay(200);
   tic('no listeners, trace level (filtered out early)')
   for (let i = 0; i < NUM_MESSAGES; i++) {
-    mainStory.trace('Message');
+    logMessage('trace');
   }
   toc('no listeners, trace level (filtered out early)', NUM_MESSAGES);
 
   // No listener
+  delay(200);
   tic('no listeners, warn level')
   for (let i = 0; i < NUM_MESSAGES; i++) {
-    mainStory.warn('Message');
+    logMessage();
   }
   toc('no listeners, warn level', NUM_MESSAGES);
 
   // Console listener
   addListener(consoleListener);
-  delay(2000); // Allow previous messages to be dumped on the new listener
+  delay(200); // Allow previous messages to be dumped on the new listener
   tic('console listener')
   for (let i = 0; i < NUM_MESSAGES; i++) {
-    mainStory.info('Message');
+    logMessage();
   }
   toc('console listener', NUM_MESSAGES);
 
   // WS listener
   removeAllListeners();
   addListener(wsServerListener);
-  delay(2000); // Allow previous messages to be dumped on the new listener
+  delay(200); // Allow previous messages to be dumped on the new listener
   tic('WS server listener')
   for (let i = 0; i < NUM_MESSAGES; i++) {
-    mainStory.info('Message');
+    logMessage();
   }
   toc('WS server listener', NUM_MESSAGES);
 
@@ -54,6 +56,10 @@ const run = () => {
   flushResults();
   process.exit(0);
 };
+
+const logMessage = (level = 'info') => {
+  mainStory[level]('Message');
+}
 
 let t0 = {};
 const results = [];
