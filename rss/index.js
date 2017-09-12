@@ -4,23 +4,27 @@ const fetch = require('omni-fetch');
 const RssParser = require('feedparser');
 const intoStream = require('into-stream');
 const delay = require('delay');
-// import fetchRssAndParse from './fetchRssAndParse';
 
 const NUM_TRIES = 10;
 const RETRY_DELAY = 100;
 
-const run = async () => {
+const fetchRssAndParse = async url => {
+  const xml = await fetchRss(url);
+  const items = await parse(xml);
+  console.log(`#items: ${items.length}`);
+};
+
+const fetchRss = async url => {
   let result;
   for (let i = 0; i < NUM_TRIES; i++) {
-    result = await fetch('http://heart.bmj.com/rss/current.xml');
+    result = await fetch(url);
     console.log(result.status);
     if (result.status === 200) break;
     await delay(RETRY_DELAY);
   }
-  if (result.status !== 200) return;
+  if (result.status !== 200) throw new Error(`FETCH_FAILED ${result.status}`);
   const xml = await result.text();
-  const items = await parse(xml);
-  console.log(`#items: ${items.length}`);
+  return xml;
 };
 
 const parse = xml =>
@@ -33,8 +37,9 @@ const parse = xml =>
     });
     rssParser.on('readable', function rxFeed() {
       const stream = this;
-      let item;
-      while ((item = stream.read())) {
+      let rawItem;
+      while ((rawItem = stream.read())) {
+        const item = parseItem(rawItem);
         console.log(`- ${item.title}`);
         items.push(item);
       }
@@ -42,8 +47,9 @@ const parse = xml =>
     rssParser.on('end', () => {
       resolve(items);
     });
-    console.log('RSS parser ready to accept data');
     intoStream(xml).pipe(rssParser);
   });
 
-run();
+const parseItem = rawItem => ({ title: rawItem.title });
+
+fetchRssAndParse('http://heart.bmj.com/rss/current.xml');
