@@ -1,0 +1,26 @@
+{
+  "name": "giu-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.8.1",
+    "font-awesome": "^4.7.0",
+    "typeface-roboto": "^0.0.43"
+  },
+  "dependencies": {
+    "giu": "^0.15.0-alpha.3",
+    "next": "^4.1.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
