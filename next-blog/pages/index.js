@@ -3,7 +3,7 @@ import Navbar from '../components/navbar';
 
 class Page extends React.Component {
   getInitialProps({ query }) {
-    return { query };
+    return query;
   }
   render() {
     return (
