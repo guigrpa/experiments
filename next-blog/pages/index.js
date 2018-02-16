@@ -9,7 +9,7 @@ class Page extends React.Component {
     return (
       <div>
         <Navbar />
-        <h2>Index ({this.props.query})</h2>
+        <h2>Index ({this.props.lang})</h2>
       </div>
     );
   }
