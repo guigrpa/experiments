@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '../components/navbar';
 
 class Page extends React.Component {
-  getInitialProps({ query }) {
+  static getInitialProps({ query }) {
     return query;
   }
   render() {
