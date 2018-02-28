@@ -8,5 +8,175 @@
     "sources": [
       "src/exampleCode.js"
     ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2Uy": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2Uy",
+    "context": "example",
+    "text": "Example message2",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2Uz": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2Uz",
+    "context": "example",
+    "text": "Example message3",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U0": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U0",
+    "context": "example",
+    "text": "Example message4",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U1": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U1",
+    "context": "example",
+    "text": "Example message5",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U2": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U2",
+    "context": "example",
+    "text": "Example message6",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U3": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U3",
+    "context": "example",
+    "text": "Example message7",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U4": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U4",
+    "context": "example",
+    "text": "Example message8",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U5": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U5",
+    "context": "example",
+    "text": "Example message9",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMA==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMA==",
+    "context": "example",
+    "text": "Example message10",
+    "firstUsed": "2018-02-28T10:54:52.453Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMQ==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMQ==",
+    "context": "example",
+    "text": "Example message11",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMg==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMg==",
+    "context": "example",
+    "text": "Example message12",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMw==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxMw==",
+    "context": "example",
+    "text": "Example message13",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNA==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNA==",
+    "context": "example",
+    "text": "Example message14",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNQ==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNQ==",
+    "context": "example",
+    "text": "Example message15",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNg==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNg==",
+    "context": "example",
+    "text": "Example message16",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNw==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxNw==",
+    "context": "example",
+    "text": "Example message17",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  },
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxOA==": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2UxOA==",
+    "context": "example",
+    "text": "Example message18",
+    "firstUsed": "2018-02-28T10:55:11.643Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
   }
 }

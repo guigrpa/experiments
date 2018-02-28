@@ -1,3 +1,20 @@
 const _t = str => str;
 
-const a = _t('example_Example message');
+let a = _t('example_Example message');
+a = _t('example_Example message2');
+a = _t('example_Example message3');
+a = _t('example_Example message4');
+a = _t('example_Example message5');
+a = _t('example_Example message6');
+a = _t('example_Example message7');
+a = _t('example_Example message8');
+a = _t('example_Example message9');
+a = _t('example_Example message10');
+a = _t('example_Example message11');
+a = _t('example_Example message12');
+a = _t('example_Example message13');
+a = _t('example_Example message14');
+a = _t('example_Example message15');
+a = _t('example_Example message16');
+a = _t('example_Example message17');
+a = _t('example_Example message18');
