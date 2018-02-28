@@ -1,0 +1,12 @@
+{
+  "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U=": {
+    "id": "ZXhhbXBsZV9FeGFtcGxlIG1lc3NhZ2U=",
+    "context": "example",
+    "text": "Example message",
+    "firstUsed": "2018-02-28T08:53:26.790Z",
+    "unusedSince": null,
+    "sources": [
+      "src/exampleCode.js"
+    ]
+  }
+}
