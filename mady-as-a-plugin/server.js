@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const initMady = require('mady/lib/server').default;
+const initMady = require('mady/lib/serverPlugin').default;
 
 const PORT = 3000;
 
