@@ -1,0 +1,14 @@
+{
+  "name": "webgl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-serve -p 3000 ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-serve": "^1.0.1"
+  }
+}
