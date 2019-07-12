@@ -1,8 +1,8 @@
 // Basic idea:
-// image --> frameBuffer[0]
-// frameBuffer[0] --> frameBuffer[1]
-// frameBuffer[1] --> frameBuffer[0]
-// frameBuffer[0] --> canvas
+// image (uImageTex) --> frameBuffer[0] (texture[0])
+// texture[0] --> frameBuffer[1] (texture[1])
+// texture[1] --> frameBuffer[0] (texture[0])
+// texture[0] --> canvas
 
 // ========================================
 // Shaders
@@ -81,6 +81,7 @@ const run = image => {
     const texture = createAndSetUpTexture(gl);
     textures.push(texture);
     // Make the texture the same size as the image
+    gl.bindTexture(gl.TEXTURE_2D, texture);
     // prettier-ignore
     gl.texImage2D(
       gl.TEXTURE_2D, 0, gl.RGBA,
@@ -117,30 +118,35 @@ const run = image => {
   gl.vertexAttribPointer(aTexCoord, 2, gl.FLOAT, false, 0, 0);
 
   // Run a number of times, ping-ponging between framebuffers
-  gl.uniform1f(uFlipY, 1); // don't flip when drawing to framebuffers
   gl.bindTexture(gl.TEXTURE_2D, uImageTex); // first input: the image
-  for (let i = 0; i < 3; i++) {
-    const fbo = framebuffers[i % 2];
-    gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
-    gl.uniform2fv(uSize, [image.width, image.height]);
-    gl.viewport(0, 0, image.width, image.height);
+  const numRuns = 4;
+  for (let i = 0; i < numRuns; i++) {
+    const isLastRun = i === numRuns - 1;
 
+    // Prepare output framebuffer (canvas in the last run)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, isLastRun ? null : framebuffers[i % 2]);
+
+    // Other preparations
+    if (isLastRun) {
+      gl.uniform1f(uFlipY, -1); // flip Y at the end
+      const { clientWidth, clientHeight } = gl.canvas;
+      gl.uniform2fv(uSize, [clientWidth, clientHeight]);
+      gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+      // Make image a bit smaller
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffers.aPositionBuf);
+      setRectangle(gl, 0, 0, image.width / 3, image.height / 3);
+    } else {
+      gl.uniform1f(uFlipY, 1); // don't flip when drawing to framebuffers
+      gl.uniform2fv(uSize, [image.width, image.height]);
+      gl.viewport(0, 0, image.width, image.height);
+    }
+
+    // Draw!
     gl.drawArrays(gl.TRIANGLES, 0, 6);
 
-    gl.bindTexture(gl.TEXTURE_2D, textures[i % 2]);
+    // Prepare input for next iteration: the texture we've just drawn
+    if (!isLastRun) gl.bindTexture(gl.TEXTURE_2D, textures[i % 2]);
   }
-
-  // Final run
-  gl.uniform1f(uFlipY, -1); // flip Y at the end
-  const { clientWidth, clientHeight } = gl.canvas;
-  gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-  gl.uniform2fv(uSize, [clientWidth, clientHeight]);
-  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.aPositionBuf);
-  setRectangle(gl, 0, 0, image.width / 3, image.height / 3);
-
-  gl.drawArrays(gl.TRIANGLES, 0, 6);
 };
 
 // ========================================
