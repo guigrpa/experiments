@@ -1,3 +1,5 @@
+// Current particle positions -> next particle positions
+
 precision highp float;
 
 uniform sampler2D u_particles;

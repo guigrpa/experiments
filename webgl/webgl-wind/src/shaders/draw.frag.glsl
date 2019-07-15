@@ -1,3 +1,5 @@
+// Particle position -> color (based on wind velocity at that position)
+
 precision mediump float;
 
 uniform sampler2D u_wind;

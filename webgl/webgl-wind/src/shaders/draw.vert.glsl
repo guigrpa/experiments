@@ -1,3 +1,5 @@
+// Particle index --> particle position
+
 precision mediump float;
 
 attribute float a_index;
