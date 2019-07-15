@@ -34,11 +34,36 @@ vec2 lookup_wind(const vec2 uv) {
     return mix(mix(tl, tr, f.x), mix(bl, br, f.x), f.y);
 }
 
+const vec2 bitEnc = vec2(1.,255.);
+const vec2 bitDec = 1./bitEnc;
+
+// decode particle position from pixel RGBA
+vec2 fromRGBA(const vec4 color) {
+  vec4 rounded_color = floor(color * 255.0 + 0.5) / 255.0;
+  float x = dot(rounded_color.rg, bitDec);
+  float y = dot(rounded_color.ba, bitDec);
+  return vec2(x, y);
+}
+
+// encode particle position to pixel RGBA
+vec4 toRGBA(const vec2 pos) {
+  vec2 rg = bitEnc * pos.x;
+  rg = fract(rg);
+  rg -= rg.yy * vec2(1. / 255., 0.);
+
+  vec2 ba = bitEnc * pos.y;
+  ba = fract(ba);
+  ba -= ba.yy * vec2(1. / 255., 0.);
+
+  return vec4(rg, ba);
+}
+
 void main() {
     vec4 color = texture2D(u_particles, v_tex_pos);
-    vec2 pos = vec2(
-        color.r / 255.0 + color.b,
-        color.g / 255.0 + color.a); // decode particle position from pixel RGBA
+    // vec2 pos = vec2(
+    //     color.r / 255.0 + color.b,
+    //     color.g / 255.0 + color.a); // decode particle position from pixel RGBA
+    vec2 pos = fromRGBA(color);
 
     vec2 velocity = mix(u_wind_min, u_wind_max, lookup_wind(pos));
     float speed_t = length(velocity) / length(u_wind_max);
@@ -63,7 +88,8 @@ void main() {
     pos = mix(pos, random_pos, drop);
 
     // encode the new particle position back into RGBA
-    gl_FragColor = vec4(
-        fract(pos * 255.0),
-        floor(pos * 255.0) / 255.0);
+    // gl_FragColor = vec4(
+    //     fract(pos * 255.0),
+    //     floor(pos * 255.0) / 255.0);
+    gl_FragColor = toRGBA(pos);
 }

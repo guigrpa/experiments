@@ -16,8 +16,8 @@ void main() {
 
     // decode current particle position from the pixel's RGBA value
     v_particle_pos = vec2(
-        color.r / 255.0 + color.b,
-        color.g / 255.0 + color.a);
+        color.g / 255.0 + color.r,
+        color.a / 255.0 + color.b);
 
     gl_PointSize = 1.0;
     gl_Position = vec4(2.0 * v_particle_pos.x - 1.0, 1.0 - 2.0 * v_particle_pos.y, 0, 1);
