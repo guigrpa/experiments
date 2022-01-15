@@ -15,7 +15,7 @@
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.2.0",
     "globby": "^6.1.0",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.5",
     "split": "^1.0.0",
     "storyboard": "^2.3.1",
     "timm": "^1.2.3"
